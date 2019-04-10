@@ -43,11 +43,12 @@ include_once 'connection.php';
 
     if($_POST['first'] == "" || $_POST['last'] == ""){
       echo "Please enter your First and Last Name <br>";
-     /*if($_POST['streetAddress'] != "" && ($_POST['city'] == "" ||
+    }
+    else if($_POST['address'] != "" && ($_POST['city'] == "" ||
      $_POST['state'] == "" || $_POST['zip'] == "")) {
        echo "Please enter City, State, and Zip with your Street Address";
-     }*/
-    }else{
+     }
+    else{
     $sql = "INSERT INTO people1 (firstName, lastName, streetAddress, City,
       State, Zip, Email, Phone)  VALUES ('$first', '$last', '$address',
         '$city', '$state', '$zip', '$email', '$phone');";
